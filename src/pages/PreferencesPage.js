@@ -3,15 +3,33 @@ import TinderCard from 'react-tinder-card'
 import Button from '../components/Button'
 import filter_data from '../filter-data';
 
+const db = [
+    {
+        name: '',
+        url: './images/cost-filter.png',
+        swipe: 'up',
+    },
+    {
+        name: '',
+        url: './images/effort-filter.png',
+        swipe: 'up',
+    },
+    {
+        name: '',
+        url: './images/time-filter.png',
+        swipe: 'up',
+    },
+]
+
 function PreferencesPage() {
-    const [currentIndex, setCurrentIndex] = useState(filter_data.length - 1)
+    const [currentIndex, setCurrentIndex] = useState(db.length - 1)
     // const [lastDirection, setLastDirection] = useState()
     // used for outOfFrame closure
     const currentIndexRef = useRef(currentIndex)
 
     const childRefs = useMemo(
         () =>
-            Array(filter_data.length)
+            Array(db.length)
                 .fill(0)
                 .map((i) => React.createRef()),
         []
@@ -61,7 +79,7 @@ function PreferencesPage() {
         <>
             <div className='flex flex-col items-center justify-center'>
                 <div className='cardContainer'>
-                    {filter_data.map((character, index) => (
+                    {db.map((character, index) => (
                         <TinderCard
                             ref={childRefs[index]}
                             className='swipe'
