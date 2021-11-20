@@ -77,28 +77,26 @@ function PreferencesPage() {
     // }
     return (
         <>
-            <div className='flex flex-col items-center justify-center'>
-                <div className='cardContainer'>
-                    {db.map((character, index) => (
-                        <TinderCard
-                            ref={childRefs[index]}
-                            className='swipe'
-                            key={character.name}
-                            onSwipe={(dir) => swiped(dir, character.name, index)}
-                            onCardLeftScreen={() => outOfFrame(character.name, index)}
-                            preventSwipe={['right', 'left']}
+            <div className='cardContainer custom-center'>
+                {db.map((character, index) => (
+                    <TinderCard
+                        ref={childRefs[index]}
+                        className='swipe'
+                        key={character.name}
+                        onSwipe={(dir) => swiped(dir, character.name, index)}
+                        onCardLeftScreen={() => outOfFrame(character.name, index)}
+                        preventSwipe={['right', 'left']}
+                    >
+                        <div
+                            style={{ backgroundImage: 'url(' + character.url + ')' }}
+                            className='card'
                         >
-                            <div
-                                style={{ backgroundImage: 'url(' + character.url + ')' }}
-                                className='card'
-                            >
-                                <h3>{character.name}</h3>
-                            </div>
-                        </TinderCard>
-                    ))}
-                </div>
-                <Button to='/activities' text='Next'></Button>
+                            <h3>{character.name}</h3>
+                        </div>
+                    </TinderCard>
+                ))}
             </div>
+            <Button to='/activities' text='Next'></Button>
         </>
     )
 }
