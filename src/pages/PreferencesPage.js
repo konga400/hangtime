@@ -90,6 +90,7 @@ function PreferencesPage() {
                             onSwipe={(dir) => swiped(dir, character.name, index)}
                             onCardLeftScreen={() => outOfFrame(character.name, index)}
                             preventSwipe={['right', 'left']}
+                            swipeThreshold='1'
                         >
                             <div
                                 style={{ backgroundImage: 'url(' + character.url + ')' }}
