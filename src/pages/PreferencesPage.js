@@ -2,22 +2,6 @@ import React, { useState, useMemo, useRef } from 'react'
 import TinderCard from 'react-tinder-card'
 import Button from '../components/Button'
 import filter_data from '../filter-data';
-// import PreferenceCard from '../components/PreferenceCard'
-
-// let filter_data = [
-//     {
-//         name: '',
-//         url: './images/cost-filter.png'
-//     },
-//     {
-//         name: '',
-//         url: './images/effort-filter.png'
-//     },
-//     {
-//         name: '',
-//         url: './images/cost-filter.png'
-//     },
-// ]
 
 function PreferencesPage() {
     const [currentIndex, setCurrentIndex] = useState(filter_data.length - 1)

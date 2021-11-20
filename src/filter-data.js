@@ -4,16 +4,16 @@ let filter_data = [
         url: './images/cost-filter.png',
         swipe: 'up',
     },
-    {
-        name: '',
-        url: './images/effort-filter.png',
-        swipe: 'up',
-    },
-    {
-        name: '',
-        url: './images/cost-filter.png',
-        swipe: 'up',
-    },
+    // {
+    //     name: '',
+    //     url: './images/effort-filter.png',
+    //     swipe: 'up',
+    // },
+    // {
+    //     name: '',
+    //     url: './images/cost-filter.png',
+    //     swipe: 'up',
+    // },
 ]
 
 export default filter_data
