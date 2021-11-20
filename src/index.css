@@ -2,3 +2,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  position: relative;
+  height: 100vh;
+  background-color: gray;
+}
+
+.custom-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
