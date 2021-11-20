@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Activities from './pages/Activities.js';
-import Preferences from './pages/Preferences.js';
+import ActivitiesPage from './pages/ActivitiesPage.js';
+import PreferencesPage from './pages/PreferencesPage.js';
 
 
 function App() {
@@ -8,8 +8,8 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path='/' exact element={<Preferences />} />
-          <Route path='/activities' element={<Activities />} />
+          <Route path='/' exact element={<PreferencesPage />} />
+          <Route path='/activities' element={<ActivitiesPage />} />
         </Routes>
       </Router>
     </>
