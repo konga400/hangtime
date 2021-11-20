@@ -67,19 +67,21 @@ function ActivityCard({
 
     let right = () => {
         setRightFilled(true);
+        setLeftFilled(false);
         filtered_data_db.at(id).thumbs = 2;
     }
     let left = () => {
         setLeftFilled(true);
+        setRightFilled(false);
         filtered_data_db.at(id).thumbs = 1;
     }
 
     return (
         <>
             {/* <div className='relative flex justify-center items-center'> */}
-            <div className='rounded-2xl bg-gray-600 p-5 w-96 m-4'>
-                <h1 className='font-sans text-2xl text-white'>{name}</h1>
-                <div className='w-full overflow-y-hidden overflow-x-auto p-3 flex'>
+            <div className='rounded-2xl bg-white p-5 w-10/12 m-4 max-w-sm shadow-xl'>
+                <h1 className='font-sans text-2xl text-pink-600 font-bold'>{name}</h1>
+                <div className='overflow-y-hidden overflow-x-auto p-3 -mx-5 flex'>
                     <MicroAttributeCards text={physical_effort_string} />
                     <MicroAttributeCards text={cost_string} />
                     <MicroAttributeCards text={time_string} />

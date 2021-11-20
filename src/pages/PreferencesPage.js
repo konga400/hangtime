@@ -48,6 +48,9 @@ function PreferencesPage() {
         filter_data.at(index).swipe = direction;
         console.log(filter_data.at(index).swipe);
         updateCurrentIndex(index - 1);
+        if (index === 0) {
+            setvisability("visable");
+        }
     }
 
     const outOfFrame = (name, idx) => {
@@ -72,28 +75,35 @@ function PreferencesPage() {
     //     updateCurrentIndex(newIndex)
     //     await childRefs[newIndex].current.restoreCard()
     // }
+
+    const [visability, setvisability] = useState("hidden");
+
     return (
         <>
-            <div className='cardContainer custom-center'>
-                {db.map((character, index) => (
-                    <TinderCard
-                        ref={childRefs[index]}
-                        className='swipe'
-                        key={character.name}
-                        onSwipe={(dir) => swiped(dir, character.name, index)}
-                        onCardLeftScreen={() => outOfFrame(character.name, index)}
-                        preventSwipe={['right', 'left']}
-                    >
-                        <div
-                            style={{ backgroundImage: 'url(' + character.url + ')' }}
-                            className='card'
+            <div className='relative'>
+                <div className='cardContainer '>
+                    {db.map((character, index) => (
+                        <TinderCard
+                            ref={childRefs[index]}
+                            className='swipe'
+                            key={character.name}
+                            onSwipe={(dir) => swiped(dir, character.name, index)}
+                            onCardLeftScreen={() => outOfFrame(character.name, index)}
+                            preventSwipe={['right', 'left']}
                         >
-                            <h3>{character.name}</h3>
-                        </div>
-                    </TinderCard>
-                ))}
+                            <div
+                                style={{ backgroundImage: 'url(' + character.url + ')' }}
+                                className='card'
+                            >
+                                <h3>{character.name}</h3>
+                            </div>
+                        </TinderCard>
+                    ))}
+                </div>
+                <div className={`custom-center ${visability}`}>
+                    <Button to='/activities' text='Next'></Button>
+                </div>
             </div>
-            <Button to='/activities' text='Next'></Button>
         </>
     )
 }

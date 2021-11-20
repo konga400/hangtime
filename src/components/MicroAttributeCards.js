@@ -5,7 +5,7 @@ function MicroAttributeCards({
 }) {
     return (
         <>
-            <div className='bg-red-400 text-white p-1 mx-1 text-sm w-max rounded-lg whitespace-nowrap'>
+            <div className=' bg-purple-800 text-white px-2 py-1 mx-1 text-sm w-max rounded-lg whitespace-nowrap'>
                 {text}
             </div>
         </>

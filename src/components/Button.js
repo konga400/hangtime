@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Button({
     to,
@@ -8,8 +8,8 @@ function Button({
     return (
         <>
             <Link to={to}>
-                <div className='w-max p-3 bg-white rounded-lg'>
-                    <h1 className='text-gray-900'>{text}</h1>
+                <div className='w-max px-4 py-3 bg-pink-600 rounded-lg'>
+                    <h1 className='text-white text-xl font-bold'>{text}</h1>
                 </div>
             </Link>
         </>

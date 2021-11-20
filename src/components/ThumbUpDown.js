@@ -14,10 +14,10 @@ function ThumbUpDown({
 
     let format;
     if (filled) {
-        format = 'border-2 border-white bg-white rounded-lg px-3 py-1 w-max text-black'
+        format = 'border-2 border-pink-600 bg-pink-600 rounded-lg px-3 py-1 w-max text-white'
     }
     else {
-        format = 'border-2 border-white rounded-lg px-3 py-1 w-max text-white';
+        format = 'border-2 border-pink-600 rounded-lg px-3 py-1 w-max text-pink-600';
     }
 
     return (

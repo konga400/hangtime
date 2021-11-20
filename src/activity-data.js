@@ -1,7 +1,7 @@
 let activity_data = [
     {
         name: "Thrift Shopping",
-        descritpion: "Go out with friends and find some vintage to add to yor wardrobe.",
+        description: "Go out with friends and find some vintage to add to yor wardrobe.",
         outside: true,
         physical_effort: true, // If we swipe down on 2 and physical_effort is true then display
         cost: true, // If we swipe up on 1 and cost is true then display
@@ -12,7 +12,7 @@ let activity_data = [
     },
     {
         name: "Swimming",
-        descritpion: "Hop in the deep end and enjoy some time by the pool.",
+        description: "Hop in the deep end and enjoy some time by the pool.",
         outside: true,
         physical_effort: true,
         cost: true,
@@ -23,7 +23,7 @@ let activity_data = [
     },
     {
         name: "Hot Tubbing",
-        descritpion: "Enjoy the conversation as you soak it up with your friends.",
+        description: "Enjoy the conversation as you soak it up with your friends.",
         outside: true,
         physical_effort: false,
         cost: false,
@@ -34,7 +34,7 @@ let activity_data = [
     },
     {
         name: "Frisbee Golf",
-        descritpion: "Challenge your skills on the local course.",
+        description: "Challenge your skills on the local course.",
         outside: true,
         physical_effort: true,
         cost: false,
@@ -45,7 +45,7 @@ let activity_data = [
     },
     {
         name: "Mini Golf",
-        descritpion: "Enjoy a round of put-put at the local course.",
+        description: "Enjoy a round of put-put at the local course.",
         outside: true,
         physical_effort: true,
         cost: true,
@@ -56,7 +56,7 @@ let activity_data = [
     },
     {
         name: "Baking",
-        descritpion: "Put your culinary skills to the test with something sweet.",
+        description: "Put your culinary skills to the test with something sweet.",
         outside: false,
         physical_effort: false,
         cost: true,
@@ -67,7 +67,7 @@ let activity_data = [
     },
     {
         name: "Country Dancing",
-        descritpion: "Show off your best moves and enjoy the country atmosphere.",
+        description: "Show off your best moves and enjoy the country atmosphere.",
         outside: true,
         physical_effort: true,
         cost: true,
@@ -78,7 +78,7 @@ let activity_data = [
     },
     {
         name: "Swing Dancing",
-        descritpion: "Test with a lively night on the dance floor.",
+        description: "Test with a lively night on the dance floor.",
         outside: true,
         physical_effort: true,
         cost: true,
@@ -89,7 +89,7 @@ let activity_data = [
     },
     {
         name: "Board Game",
-        descritpion: "Have some casual fun with friends while you roll the dice.",
+        description: "Have some casual fun with friends while you roll the dice.",
         outside: false,
         physical_effort: false,
         cost: false,
@@ -100,7 +100,7 @@ let activity_data = [
     },
     {
         name: "Watch a Movie",
-        descritpion: "Kick back and break out popcorn for a chill evening on the couch.",
+        description: "Kick back and break out popcorn for a chill evening on the couch.",
         outside: false,
         physical_effort: false,
         cost: true,
@@ -111,7 +111,7 @@ let activity_data = [
     },
     {
         name: "Nerf War",
-        descritpion: "Test your aim and your accuracy in a friendly shootout.",
+        description: "Test your aim and your accuracy in a friendly shootout.",
         outside: false,
         physical_effort: true,
         cost: false,
@@ -122,7 +122,7 @@ let activity_data = [
     },
     {
         name: "Axe Throwing",
-        descritpion: "Blow off some steam and test your axe-throwing skills.",
+        description: "Blow off some steam and test your axe-throwing skills.",
         outside: true,
         physical_effort: true,
         cost: true,
@@ -133,7 +133,7 @@ let activity_data = [
     },
     {
         name: "Football",
-        descritpion: "Get outside and perfect that spiral.",
+        description: "Get outside and perfect that spiral.",
         outside: true,
         physical_effort: true,
         cost: false,
@@ -144,7 +144,7 @@ let activity_data = [
     },
     {
         name: "Kickball",
-        descritpion: "Imagine the face of your worst enemy when you kick it out of the park.",
+        description: "Imagine the face of your worst enemy when you kick it out of the park.",
         outside: true,
         physical_effort: true,
         cost: true,
@@ -155,7 +155,7 @@ let activity_data = [
     },
     {
         name: "Four Square",
-        descritpion: "Bounce it back and forth and enjoy the childhood nostaliga.",
+        description: "Bounce it back and forth and enjoy the childhood nostaliga.",
         outside: true,
         physical_effort: true,
         cost: false,
@@ -166,7 +166,7 @@ let activity_data = [
     },
     {
         name: "Badminton",
-        descritpion: "Test your reflexes and your agility with a fun game of birdie.",
+        description: "Test your reflexes and your agility with a fun game of birdie.",
         outside: true,
         physical_effort: true,
         cost: false,
@@ -177,7 +177,7 @@ let activity_data = [
     },
     {
         name: "Volleyball",
-        descritpion: "Work on that jump serve and enjoy some game time with your friends.",
+        description: "Work on that jump serve and enjoy some game time with your friends.",
         outside: true,
         physical_effort: true,
         cost: false,
@@ -188,7 +188,7 @@ let activity_data = [
     },
     {
         name: "Pickleball",
-        descritpion: "Work on that backand with your giant ping-pong paddle.",
+        description: "Work on that backand with your giant ping-pong paddle.",
         outside: true,
         physical_effort: true,
         cost: false,
@@ -199,7 +199,7 @@ let activity_data = [
     },
     {
         name: "Corn Hole",
-        descritpion: "Test your aim and your patience as you compete with friends.",
+        description: "Test your aim and your patience as you compete with friends.",
         outside: true,
         physical_effort: false,
         cost: false,
@@ -210,7 +210,7 @@ let activity_data = [
     },
     {
         name: "Painting",
-        descritpion: "Find you inner Picasso and unleash your creativity.",
+        description: "Find you inner Picasso and unleash your creativity.",
         outside: false,
         physical_effort: false,
         cost: false,
@@ -221,7 +221,7 @@ let activity_data = [
     },
     {
         name: "Drawing",
-        descritpion: "Use your imagination and experience the simple joy of doodling.",
+        description: "Use your imagination and experience the simple joy of doodling.",
         outside: false,
         physical_effort: false,
         cost: false,
@@ -232,7 +232,7 @@ let activity_data = [
     },
     {
         name: "Photoshoot",
-        descritpion: "Break out your best pose for the camera, even if it's just your phone.",
+        description: "Break out your best pose for the camera, even if it's just your phone.",
         outside: true,
         physical_effort: false,
         cost: false,
@@ -243,7 +243,7 @@ let activity_data = [
     },
     {
         name: "Walk",
-        descritpion: "Take some time to enjoy peace and quiet of the outdoors.",
+        description: "Take some time to enjoy peace and quiet of the outdoors.",
         outside: true,
         physical_effort: false,
         cost: false,
@@ -254,7 +254,7 @@ let activity_data = [
     },
     {
         name: "Jenga",
-        descritpion: "Test your skills of strategy and balance with this fun game.",
+        description: "Test your skills of strategy and balance with this fun game.",
         outside: false,
         physical_effort: false,
         cost: false,
@@ -265,7 +265,7 @@ let activity_data = [
     },
     {
         name: "Bike Ride",
-        descritpion: "Enjoy a casual ride on the town with friends.",
+        description: "Enjoy a casual ride on the town with friends.",
         outside: true,
         physical_effort: true,
         cost: false,
@@ -276,7 +276,7 @@ let activity_data = [
     },
     {
         name: "Checkers",
-        descritpion: "Enjoy the simple pleasure of a classic game of checkers.",
+        description: "Enjoy the simple pleasure of a classic game of checkers.",
         outside: false,
         physical_effort: false,
         cost: false,
@@ -287,7 +287,7 @@ let activity_data = [
     },
     {
         name: "Make Dinner",
-        descritpion: "Unleash your inner Gordon Ramsy and cook a meal for your friends.",
+        description: "Unleash your inner Gordon Ramsy and cook a meal for your friends.",
         outside: false,
         physical_effort: false,
         cost: true,
@@ -298,7 +298,7 @@ let activity_data = [
     },
     {
         name: "Restaurant",
-        descritpion: "Eating out is always a win. Enjoy a the food and have some fun.",
+        description: "Eating out is always a win. Enjoy a the food and have some fun.",
         outside: true,
         physical_effort: false,
         cost: true,
@@ -309,7 +309,7 @@ let activity_data = [
     },
     {
         name: "Pictionary",
-        descritpion: "Put those doodling skills from Spanish class to the test.",
+        description: "Put those doodling skills from Spanish class to the test.",
         outside: false,
         physical_effort: false,
         cost: false,
@@ -320,7 +320,7 @@ let activity_data = [
     },
     {
         name: "Build a Fort",
-        descritpion: "Your inner 9-year-old will thank you for building a fort with friends.",
+        description: "Your inner 9-year-old will thank you for building a fort with friends.",
         outside: false,
         physical_effort: false,
         cost: false,
@@ -331,7 +331,7 @@ let activity_data = [
     },
     {
         name: "Mario Kart",
-        descritpion: "Enjoy this Nintendo classic and race against your friends.",
+        description: "Enjoy this Nintendo classic and race against your friends.",
         outside: false,
         physical_effort: false,
         cost: true,
@@ -342,7 +342,7 @@ let activity_data = [
     },
     {
         name: "Rock Climbing",
-        descritpion: "Get your adrenaline fix with your friends at the local rock climbing gym.",
+        description: "Get your adrenaline fix with your friends at the local rock climbing gym.",
         outside: true,
         physical_effort: true,
         cost: true,
@@ -353,7 +353,7 @@ let activity_data = [
     },
     {
         name: "Truth or Dare",
-        descritpion: "Get real with your friends and laugh all night",
+        description: "Get real with your friends and laugh all night",
         outside: false,
         physical_effort: false,
         cost: false,
@@ -364,7 +364,7 @@ let activity_data = [
     },
     {
         name: "Water Balloon Fight",
-        descritpion: "Test your aim against your friends, just try not to hit anyone in the face.",
+        description: "Test your aim against your friends, just try not to hit anyone in the face.",
         outside: true,
         physical_effort: true,
         cost: true,
@@ -375,7 +375,7 @@ let activity_data = [
     },
     {
         name: "Pottery-Making",
-        descritpion: "Schedule a time at a local studio and make something one of a kind.",
+        description: "Schedule a time at a local studio and make something one of a kind.",
         outside: true,
         physical_effort: false,
         cost: true,
@@ -386,7 +386,7 @@ let activity_data = [
     },
     {
         name: "Star Gazing",
-        descritpion: "Throw down a blanket and take in all the beauty the night sky has to offer.",
+        description: "Throw down a blanket and take in all the beauty the night sky has to offer.",
         outside: true,
         physical_effort: false,
         cost: false,
@@ -397,7 +397,7 @@ let activity_data = [
     },
     {
         name: "Chess",
-        descritpion: "Challenge your intellect with this classic game of strategy.",
+        description: "Challenge your intellect with this classic game of strategy.",
         outside: false,
         physical_effort: false,
         cost: false,
@@ -408,7 +408,7 @@ let activity_data = [
     },
     {
         name: "Sidewalk Chalk",
-        descritpion: "Embrace your inner child and cover the pavement with your work of art",
+        description: "Embrace your inner child and cover the pavement with your work of art",
         outside: true,
         physical_effort: false,
         cost: false,
@@ -419,7 +419,7 @@ let activity_data = [
     },
     {
         name: "Tennis",
-        descritpion: "Practice your yell along with your backhand.",
+        description: "Practice your yell along with your backhand.",
         outside: true,
         physical_effort: true,
         cost: true,
@@ -430,7 +430,7 @@ let activity_data = [
     },
     {
         name: "Oragami",
-        descritpion: "Find relaxation as you learn the acient art of Oragami.",
+        description: "Find relaxation as you learn the acient art of Oragami.",
         outside: false,
         physical_effort: false,
         cost: false,
@@ -441,7 +441,7 @@ let activity_data = [
     },
     {
         name: "Goat Yoga",
-        descritpion: "Find you inner peace with the company of tiny goats.",
+        description: "Find you inner peace with the company of tiny goats.",
         outside: true,
         physical_effort: true,
         cost: true,
@@ -452,7 +452,7 @@ let activity_data = [
     },
     {
         name: "Puppy Barn",
-        descritpion: "Get your emotoinal boost for the next 20 years by visiting your local Puppy Barn.",
+        description: "Get your emotoinal boost for the next 20 years by visiting your local Puppy Barn.",
         outside: true,
         physical_effort: false,
         cost: false,
@@ -463,7 +463,7 @@ let activity_data = [
     },
     {
         name: "Yoga",
-        descritpion: "Achieve balance of mind and body with this relaxing home workout.",
+        description: "Achieve balance of mind and body with this relaxing home workout.",
         outside: false,
         physical_effort: true,
         cost: false,
@@ -474,7 +474,7 @@ let activity_data = [
     },
     {
         name: "Jogging",
-        descritpion: "Have fun with your friends as you go out for a jog.",
+        description: "Have fun with your friends as you go out for a jog.",
         outside: true,
         physical_effort: true,
         cost: false,
@@ -485,7 +485,7 @@ let activity_data = [
     },
     {
         name: "Archery",
-        descritpion: "If the Hunger Games ever happen this will be a must-have skill.",
+        description: "If the Hunger Games ever happen this will be a must-have skill.",
         outside: true,
         physical_effort: true,
         cost: true,
@@ -496,7 +496,7 @@ let activity_data = [
     },
     {
         name: "Among Us",
-        descritpion: "Enjoy this digital game of mafia with yout friends, either remotely or in-person.",
+        description: "Enjoy this digital game of mafia with yout friends, either remotely or in-person.",
         outside: false,
         physical_effort: false,
         cost: false,
@@ -507,7 +507,7 @@ let activity_data = [
     },
     {
         name: "HeadsUp!",
-        descritpion: "Trivia has never been more fun than with this classic app.",
+        description: "Trivia has never been more fun than with this classic app.",
         outside: true,
         physical_effort: true,
         cost: true,
@@ -518,7 +518,7 @@ let activity_data = [
     },
     {
         name: "Panda Express",
-        descritpion: "Enjoy an authentic Chinese meal at your local Panda Express.",
+        description: "Enjoy an authentic Chinese meal at your local Panda Express.",
         outside: true,
         physical_effort: false,
         cost: true,
@@ -529,7 +529,7 @@ let activity_data = [
     },
     {
         name: "Cafe Rio",
-        descritpion: "Enjoy the finest authientic Mexican Food in Utah at Cafe Rio.",
+        description: "Enjoy the finest authientic Mexican Food in Utah at Cafe Rio.",
         outside: true,
         physical_effort: false,
         cost: true,
@@ -540,7 +540,7 @@ let activity_data = [
     },
     {
         name: "Escape Room",
-        descritpion: "Work with freinds to solve puzzles and escape as fast as possible.",
+        description: "Work with freinds to solve puzzles and escape as fast as possible.",
         outside: true,
         physical_effort: false,
         cost: true,
@@ -551,7 +551,7 @@ let activity_data = [
     },
     {
         name: "Hike the Y",
-        descritpion: "The view is always worth it after completing this classic hike in Provo.",
+        description: "The view is always worth it after completing this classic hike in Provo.",
         outside: true,
         physical_effort: true,
         cost: false,
@@ -562,7 +562,7 @@ let activity_data = [
     },
     {
         name: "BYU Museum of Art",
-        descritpion: "Take in the world-class exhibits and even grab a bite at the BYU MOA.",
+        description: "Take in the world-class exhibits and even grab a bite at the BYU MOA.",
         outside: true,
         physical_effort: false,
         cost: false,
@@ -573,7 +573,7 @@ let activity_data = [
     },
     {
         name: "BYU Bean Museum",
-        descritpion: "Learn more about the world around you at the BYU bean museum.",
+        description: "Learn more about the world around you at the BYU bean museum.",
         outside: true,
         physical_effort: false,
         cost: false,
@@ -584,7 +584,7 @@ let activity_data = [
     },
     {
         name: "Sundance Resort",
-        descritpion: "Take in the scenery and the slopes at Sundance.",
+        description: "Take in the scenery and the slopes at Sundance.",
         outside: true,
         physical_effort: true,
         cost: true,
@@ -595,7 +595,7 @@ let activity_data = [
     },
     {
         name: "Ice Skating",
-        descritpion: "Enjoy the thrill of skating at the rink, just try not to fall.",
+        description: "Enjoy the thrill of skating at the rink, just try not to fall.",
         outside: true,
         physical_effort: true,
         cost: true,
@@ -606,7 +606,7 @@ let activity_data = [
     },
     {
         name: "Bonfire",
-        descritpion: "Find a fire ring at a local park or camp site and enjoy the fire.",
+        description: "Find a fire ring at a local park or camp site and enjoy the fire.",
         outside: true,
         physical_effort: false,
         cost: true,
