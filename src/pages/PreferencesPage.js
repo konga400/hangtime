@@ -1,32 +1,33 @@
 import React, { useState, useMemo, useRef } from 'react'
 import TinderCard from 'react-tinder-card'
 import Button from '../components/Button'
+import filter_data from '../filter-data';
 // import PreferenceCard from '../components/PreferenceCard'
 
-const db = [
-    {
-        name: '',
-        url: './images/cost-filter.png'
-    },
-    {
-        name: '',
-        url: './images/effort-filter.png'
-    },
-    {
-        name: '',
-        url: './images/cost-filter.png'
-    },
-]
+// let filter_data = [
+//     {
+//         name: '',
+//         url: './images/cost-filter.png'
+//     },
+//     {
+//         name: '',
+//         url: './images/effort-filter.png'
+//     },
+//     {
+//         name: '',
+//         url: './images/cost-filter.png'
+//     },
+// ]
 
 function PreferencesPage() {
-    const [currentIndex, setCurrentIndex] = useState(db.length - 1)
+    const [currentIndex, setCurrentIndex] = useState(filter_data.length - 1)
     // const [lastDirection, setLastDirection] = useState()
     // used for outOfFrame closure
     const currentIndexRef = useRef(currentIndex)
 
     const childRefs = useMemo(
         () =>
-            Array(db.length)
+            Array(filter_data.length)
                 .fill(0)
                 .map((i) => React.createRef()),
         []
@@ -37,14 +38,17 @@ function PreferencesPage() {
         currentIndexRef.current = val
     }
 
-    // const canGoBack = currentIndex < db.length - 1
+    // const canGoBack = currentIndex < filter_data.length - 1
 
     // const canSwipe = currentIndex >= 0
 
     // set last direction and decrease current index
     const swiped = (direction, nameToDelete, index) => {
         // setLastDirection(direction)
-        updateCurrentIndex(index - 1)
+        // console.log(direction);
+        filter_data.at(index).swipe = direction;
+        console.log(filter_data.at(index).swipe);
+        updateCurrentIndex(index - 1);
     }
 
     const outOfFrame = (name, idx) => {
@@ -57,7 +61,7 @@ function PreferencesPage() {
     }
 
     // const swipe = async (dir) => {
-    //     if (canSwipe && currentIndex < db.length) {
+    //     if (canSwipe && currentIndex < filter_data.length) {
     //         await childRefs[currentIndex].current.swipe(dir) // Swipe the card!
     //     }
     // }
@@ -73,7 +77,7 @@ function PreferencesPage() {
         <>
             <div className='custom-center overflow-x-hidden overflow-y-auto flex flex-col items-center justify-center'>
                 <div className='cardContainer'>
-                    {db.map((character, index) => (
+                    {filter_data.map((character, index) => (
                         <TinderCard
                             ref={childRefs[index]}
                             className='swipe'

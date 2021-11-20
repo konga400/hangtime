@@ -3,13 +3,13 @@ import MicroAttributeCards from './MicroAttributeCards'
 import ThumbUpDown from './ThumbUpDown'
 
 function ActivityCard({
-    id,
+    name,
 }) {
     return (
         <>
             {/* <div className='relative flex justify-center items-center'> */}
             <div className='rounded-2xl bg-gray-600 p-5 w-96 m-4'>
-                <h1 className='font-sans text-2xl text-white'>Spikeball</h1>
+                <h1 className='font-sans text-2xl text-white'>{name}</h1>
                 <div className='w-full overflow-y-hidden overflow-x-auto p-3 flex'>
                     <MicroAttributeCards text="Outdoor" />
                     <MicroAttributeCards text="Paid" />
