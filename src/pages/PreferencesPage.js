@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useRef } from 'react'
 import TinderCard from 'react-tinder-card'
 import Button from '../components/Button'
-import PreferenceCard from '../components/PreferenceCard'
+// import PreferenceCard from '../components/PreferenceCard'
 
 const db = [
     {
@@ -20,7 +20,7 @@ const db = [
 
 function PreferencesPage() {
     const [currentIndex, setCurrentIndex] = useState(db.length - 1)
-    const [lastDirection, setLastDirection] = useState()
+    // const [lastDirection, setLastDirection] = useState()
     // used for outOfFrame closure
     const currentIndexRef = useRef(currentIndex)
 
@@ -37,13 +37,13 @@ function PreferencesPage() {
         currentIndexRef.current = val
     }
 
-    const canGoBack = currentIndex < db.length - 1
+    // const canGoBack = currentIndex < db.length - 1
 
-    const canSwipe = currentIndex >= 0
+    // const canSwipe = currentIndex >= 0
 
     // set last direction and decrease current index
     const swiped = (direction, nameToDelete, index) => {
-        setLastDirection(direction)
+        // setLastDirection(direction)
         updateCurrentIndex(index - 1)
     }
 
@@ -56,19 +56,19 @@ function PreferencesPage() {
         // during latest swipes. Only the last outOfFrame event should be considered valid
     }
 
-    const swipe = async (dir) => {
-        if (canSwipe && currentIndex < db.length) {
-            await childRefs[currentIndex].current.swipe(dir) // Swipe the card!
-        }
-    }
+    // const swipe = async (dir) => {
+    //     if (canSwipe && currentIndex < db.length) {
+    //         await childRefs[currentIndex].current.swipe(dir) // Swipe the card!
+    //     }
+    // }
 
     // increase current index and show card
-    const goBack = async () => {
-        if (!canGoBack) return
-        const newIndex = currentIndex + 1
-        updateCurrentIndex(newIndex)
-        await childRefs[newIndex].current.restoreCard()
-    }
+    // const goBack = async () => {
+    //     if (!canGoBack) return
+    //     const newIndex = currentIndex + 1
+    //     updateCurrentIndex(newIndex)
+    //     await childRefs[newIndex].current.restoreCard()
+    // }
     return (
         <>
             <div className='custom-center overflow-x-hidden overflow-y-auto flex flex-col items-center justify-center'>
