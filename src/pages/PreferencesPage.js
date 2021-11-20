@@ -59,7 +59,7 @@ function PreferencesPage() {
     // }
     return (
         <>
-            <div className='custom-center overflow-x-hidden overflow-y-auto flex flex-col items-center justify-center'>
+            <div className='flex flex-col items-center justify-center'>
                 <div className='cardContainer'>
                     {filter_data.map((character, index) => (
                         <TinderCard

@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useRef } from 'react'
 // import TinderCard from '../react-tinder-card/index'
-import TinderCard from 'react-tinder-card'
+import TinderCard from 'react-tinder-card';
+import filter_data from '../filter-data';
 
 const db = [
     {
@@ -46,6 +47,7 @@ function TestPage() {
     // set last direction and decrease current index
     const swiped = (direction, nameToDelete, index) => {
         // setLastDirection(direction)
+        filter_data.at(index).swipe = direction;
         updateCurrentIndex(index - 1)
     }
 
