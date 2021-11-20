@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import filtered_data_db from '../filtered_data';
 import MicroAttributeCards from './MicroAttributeCards'
 import ThumbUpDown from './ThumbUpDown'
 
@@ -9,6 +10,7 @@ function ActivityCard({
     cost,
     equipment_required,
     going_out,
+    id,
     ad,
 }) {
     let physical_effort_string = "";
@@ -52,6 +54,26 @@ function ActivityCard({
         going_out_string = "Staying in";
     }
 
+    const [rightfilled, setRightFilled] = useState(false);
+    const [leftfilled, setLeftFilled] = useState(false);
+
+    // if (filtered_data_db.at(id).thumbs === 1) {
+    //     setLeftFilled(true);
+    // }
+    // if (filtered_data_db.at(id).thumbs === 2) {
+    //     setRightFilled(true);
+    // }
+
+
+    let right = () => {
+        setRightFilled(true);
+        filtered_data_db.at(id).thumbs = 2;
+    }
+    let left = () => {
+        setLeftFilled(true);
+        filtered_data_db.at(id).thumbs = 1;
+    }
+
     return (
         <>
             {/* <div className='relative flex justify-center items-center'> */}
@@ -66,11 +88,11 @@ function ActivityCard({
 
                 </div>
                 <div className='relative flex p-3 mb-6'>
-                    <div className='absolute right-10'>
-                        <ThumbUpDown up={true} id={0} />
+                    <div className='absolute right-10' onClick={() => right()}>
+                        <ThumbUpDown up={true} id={0} filled={rightfilled} />
                     </div>
-                    <div className='absolute left-10'>
-                        <ThumbUpDown up={false} id={0} />
+                    <div className='absolute left-10' onClick={() => left()}>
+                        <ThumbUpDown up={false} id={0} filled={leftfilled} />
                     </div>
                 </div>
 

@@ -2,28 +2,72 @@ import React from 'react';
 import ActivityCard from '../components/ActivityCard';
 import filter_data from '../filter-data';
 import activity_data from '../activity-data';
+import filtered_data_db from '../filtered_data';
 
 
 function ActivitiesPage() {
 
+    let temp_data = activity_data;
     let filtered_data = [];
     let allCards = [];
-    for (let index = 0; index < activity_data.length; index++) {
-        if (activity_data.at(index).cost === true && filter_data.at(0).swipe === 'up') {
-            filtered_data.push(activity_data.at(index));
+    for (let index = 0; index < temp_data.length; index++) {
+        if (temp_data.at(index).cost === true && filter_data.at(0).swipe === 'down') {
+            filtered_data.push(temp_data.at(index));
         }
         // if (activity_data.at(index).physical_effort === true && filter_data.at(1).swipe === 'down') {
         //     filtered_data.push(activity_data.at(index));
         // }
 
         // If they are false
-        if (activity_data.at(index).cost === false && filter_data.at(0).swipe === 'down') {
-            filtered_data.push(activity_data.at(index));
+        if (temp_data.at(index).cost === false && filter_data.at(0).swipe === 'up') {
+            filtered_data.push(temp_data.at(index));
         }
         // if (activity_data.at(index).physical_effort === false && filter_data.at(1).swipe === 'up') {
         //     filtered_data.push(activity_data.at(index));
         // }
     }
+    temp_data = filtered_data;
+
+    console.log(filter_data);
+
+    console.log(temp_data);
+
+    filtered_data = [];
+    for (let index = 0; index < temp_data.length; index++) {
+        if (temp_data.at(index).physical_effort === true && filter_data.at(1).swipe === 'down') {
+            filtered_data.push(temp_data.at(index));
+        }
+        if (temp_data.at(index).physical_effort === false && filter_data.at(1).swipe === 'up') {
+            filtered_data.push(temp_data.at(index));
+        }
+    }
+    temp_data = filtered_data;
+
+    console.log(temp_data);
+
+    // filtered_data = [];
+    // for (let index = 0; index < temp_data.length; index++) {
+    //     if (temp_data.at(index).time === true && filter_data.at(0).swipe === 'down') {
+    //         filtered_data.push(temp_data.at(index));
+    //     }
+    //     if (temp_data.at(index).time === false && filter_data.at(0).swipe === 'up') {
+    //         filtered_data.push(temp_data.at(index));
+    //     }
+    // }
+    // temp_data = filtered_data;
+
+    console.log(temp_data);
+
+    for (let index = 0; index < filtered_data.length; index++) {
+        const element = filtered_data[index];
+
+        filtered_data_db.push(element);
+    }
+
+    // filtered_data_db = filtered_data;
+
+    console.log("filtered_data_db");
+    console.log(filtered_data_db);
 
     for (let index = 0; index < filtered_data.length; index++) {
         allCards.push(<ActivityCard name={filtered_data.at(index).name} physical_effort={filtered_data.at(index).physical_effort} time={filtered_data.at(index).time} cost={filtered_data.at(index).cost} equipment_required={filtered_data.at(index).equipment_required} going_out={filtered_data.at(index).going_out} />)
