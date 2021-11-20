@@ -10,7 +10,7 @@ const db = [
     },
     {
         name: '',
-        url: './images/cost-filter.png'
+        url: './images/effort-filter.png'
     },
     {
         name: '',
@@ -80,6 +80,7 @@ function PreferencesPage() {
                             key={character.name}
                             onSwipe={(dir) => swiped(dir, character.name, index)}
                             onCardLeftScreen={() => outOfFrame(character.name, index)}
+                            preventSwipe={['right', 'left']}
                         >
                             <div
                                 style={{ backgroundImage: 'url(' + character.url + ')' }}
