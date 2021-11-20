@@ -8,7 +8,7 @@ function Button({
     return (
         <>
             <Link to={to}>
-                <div className='w-max p-3 bg-white'>
+                <div className='w-max p-3 bg-white rounded-lg'>
                     <h1 className='text-gray-900'>{text}</h1>
                 </div>
             </Link>
