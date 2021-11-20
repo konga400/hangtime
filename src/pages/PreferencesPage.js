@@ -20,8 +20,7 @@ const db = [
 
 function PreferencesPage() {
     const [currentIndex, setCurrentIndex] = useState(db.length - 1)
-    // const [lastDirection, setLastDirection] = useState()
-    // used for outOfFrame closure
+
     const currentIndexRef = useRef(currentIndex)
 
     const childRefs = useMemo(
@@ -37,14 +36,7 @@ function PreferencesPage() {
         currentIndexRef.current = val
     }
 
-    // const canGoBack = currentIndex < filter_data.length - 1
-
-    // const canSwipe = currentIndex >= 0
-
-    // set last direction and decrease current index
-    const swiped = (direction, nameToDelete, index) => {
-        // setLastDirection(direction)
-        // console.log(direction);
+    const swiped = (direction, index) => {
         filter_data.at(index).swipe = direction;
         console.log(filter_data.at(index).swipe);
         updateCurrentIndex(index - 1);
@@ -53,42 +45,20 @@ function PreferencesPage() {
         }
     }
 
-    const outOfFrame = (name, idx) => {
-        console.log(`${name} (${idx}) left the screen!`, currentIndexRef.current)
-        // handle the case in which go back is pressed before card goes outOfFrame
-        currentIndexRef.current >= idx && childRefs[idx].current.restoreCard()
-        // TODO: when quickly swipe and restore multiple times the same card,
-        // it happens multiple outOfFrame events are queued and the card disappear
-        // during latest swipes. Only the last outOfFrame event should be considered valid
-    }
-
-    // const swipe = async (dir) => {
-    //     if (canSwipe && currentIndex < filter_data.length) {
-    //         await childRefs[currentIndex].current.swipe(dir) // Swipe the card!
-    //     }
-    // }
-
-    // increase current index and show card
-    // const goBack = async () => {
-    //     if (!canGoBack) return
-    //     const newIndex = currentIndex + 1
-    //     updateCurrentIndex(newIndex)
-    //     await childRefs[newIndex].current.restoreCard()
-    // }
-
     const [visability, setvisability] = useState("hidden");
 
     return (
         <>
-            <div className='relative flex flex-col items-center justify-center h-screen'>
-                <div className='cardContainer '>
+            <div className='relative flex flex-col items-center justify-center h-screen text-xl font-bold text-pink-600'>
+                <i className="fas fa-arrow-up animate-pulse"></i>
+                <h1 className='animate-pulse'>Swipe Up</h1>
+                <div className='cardContainer'>
                     {db.map((character, index) => (
                         <TinderCard
                             ref={childRefs[index]}
                             className='swipe'
                             key={character.name}
-                            onSwipe={(dir) => swiped(dir, character.name, index)}
-                            onCardLeftScreen={() => outOfFrame(character.name, index)}
+                            onSwipe={(dir) => swiped(dir, index)}
                             preventSwipe={['right', 'left']}
                             swipeThreshold='1'
                         >
@@ -101,6 +71,8 @@ function PreferencesPage() {
                         </TinderCard>
                     ))}
                 </div>
+                <h1 className='animate-pulse'>Swipe Down</h1>
+                <i className="fas fa-arrow-down animate-pulse"></i>
                 <div className={`custom-center ${visability}`}>
                     <Button to='/activities' text='Next'></Button>
                 </div>

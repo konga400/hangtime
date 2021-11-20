@@ -9,6 +9,9 @@ body {
   background-color: #D6D3EF;
 }
 
+.circle-container {
+  width: 85vh;
+}
 
 .custom-center {
   position: absolute;

@@ -64,7 +64,8 @@ function ActivitiesPage() {
     return (
         <>
             <div className='max-h-screen overflow-x-hidden overflow-y-auto flex flex-col items-center p-5'>
-                <h1 className='text-pink-600 font-bold text-2xl p-3 text-center'>Your tailored list of activities</h1>
+                <h1 className='text-pink-600 font-bold text-2xl pt-3 text-center'>Your tailored list of activities</h1>
+                <h3 className='text-pink-600 text-lg pb-3 text-center'>Vote on your favorite activites</h3>
                 {allCards}
             </div>
         </>

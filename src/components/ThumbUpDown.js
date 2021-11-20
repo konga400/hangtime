@@ -23,7 +23,7 @@ function ThumbUpDown({
     return (
         <>
             <div className={format}>
-                <i class={icon}></i>
+                <i className={icon}></i>
             </div>
         </>
     )
