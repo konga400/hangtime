@@ -80,7 +80,7 @@ function PreferencesPage() {
 
     return (
         <>
-            <div className='relative'>
+            <div className='relative flex flex-col items-center justify-center h-screen'>
                 <div className='cardContainer '>
                     {db.map((character, index) => (
                         <TinderCard

@@ -24,11 +24,10 @@ body {
 .cardContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 100vw;
-  /* max-width: 300px; */
-  height: 100vh;
+  align-items: center; 
+  width: 90vw;
+  max-width: 460px;
+  height: 500px;
 }
 
 .card {
